@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="15dp"
+        android:id="@+id/movieCard"
+        android:backgroundTint="#e0dada"
+        android:layout_marginBottom="8dp"
+        android:layout_marginHorizontal="5dp"
+        app:cardCornerRadius="14dp"
+        android:layout_height="380px">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="7dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/poster"
+                android:layout_width="270px"
+                app:shapeAppearanceOverlay="@style/Circular"
+                android:scaleType="fitXY"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/poster"
+                android:gravity="left"
+                android:text="Spider Man"
+                android:textColor="#9f29e3"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@id/poster"
+                android:gravity="left"
+                android:text="⭐8.3"
+                android:textColor="@color/teal_700"
+                android:textSize="17sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rating"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_toRightOf="@id/poster"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="United States Of America"
+                android:textColor="#9a9da1"
+                android:textSize="14sp"
+                android:textStyle="italic|bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
