@@ -7,4 +7,14 @@
         android:title="search"
         app:actionViewClass="android.widget.SearchView"
         app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/about"
+        android:title="about app"
+        app:actionViewClass="android.widget.TextView"
+        />
+    <item
+        android:id="@+id/cachedMovies"
+        android:title="cached movies"
+        app:actionViewClass="android.widget.TextView" />
 </menu>

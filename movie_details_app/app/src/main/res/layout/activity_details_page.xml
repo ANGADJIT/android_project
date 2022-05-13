@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.screens.DetailsPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/detailPoster"
+                android:layout_width="match_parent"
+                android:layout_height="700px"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                app:cardUseCompatPadding="true"
+                android:outlineAmbientShadowColor="#FFFFFF"
+                android:layout_below="@+id/detailPoster"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginVertical="12dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/detailTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Movie Name"
+                        android:textColor="@color/black"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailRelease"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detailTitle"
+                        android:layout_marginTop="14dp"
+                        android:text="Release Date"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="italic" />
+
+
+                    <TextView
+                        android:id="@+id/detailDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detailRelease"
+                        android:layout_marginTop="15dp"
+                        android:gravity="start"
+                        android:text="Peter Parker's secret identity is revealed to the entire world. Desperate for help, Peter turns to Doctor Strange to make the world forget that he is Spider-Man. The spell goes horribly wrong and shatters the multiverse, bringing in monstrous villains that could destroy the world."
+                        android:textColor="#737272"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/detailCast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detailDescription"
+                        android:layout_marginTop="15dp"
+                        android:gravity="start"
+                        android:text="Marisa Tomei, Martin Starr, Jamie Foxx, J.K. Simmons, Harry Holland"
+                        android:textColor="#737272"
+                        android:textFontWeight="300"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/detailProduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/detailCast"
+                        android:layout_marginTop="15dp"
+                        android:gravity="start"
+                        android:text="Sony Pictures, Pascal Pictures, Marvel Studios, Columbia Pictures"
+                        android:textColor="#737272"
+                        android:textFontWeight="300"
+                        android:textStyle="normal" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
