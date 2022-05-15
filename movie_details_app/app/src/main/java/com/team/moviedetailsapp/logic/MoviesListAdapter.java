@@ -3,6 +3,7 @@ package com.team.moviedetailsapp.logic;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.view.LayoutInflater;
@@ -57,6 +58,10 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
             @Override
             public void onResponse(JSONArray response) {
                 final int resLength = response.length();
+
+                if (resLength == 0) {
+                    Toast.makeText(context, "No movie found with keyword '" + keyword + "'", Toast.LENGTH_SHORT).show();
+                }
 
                 for (int i = 0; i < response.length(); i++) {
                     try {
@@ -143,6 +148,11 @@ public class MoviesListAdapter extends RecyclerView.Adapter<MoviesListAdapter.Mo
         });
 
         queue.add(request);
+    }
+
+    public boolean checkForInternet() {
+        ConnectivityManager connectivityManager = ((ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE));
+        return connectivityManager.getActiveNetworkInfo() != null && connectivityManager.getActiveNetworkInfo().isConnected();
     }
 
     @NonNull
